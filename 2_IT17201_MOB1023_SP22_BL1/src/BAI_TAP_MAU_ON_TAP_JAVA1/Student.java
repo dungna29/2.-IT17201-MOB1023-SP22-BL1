@@ -42,6 +42,6 @@ public class Student extends Person {
   
   @Override
   public void inRaManHinh() {
-    System.out.printf("ID: %d | Tên: %s | Sđt: %s | MSV: %s | Ngành Học: %s",getId(),getTen(),getSdt(),getMsv(),getNganhHoc());   
+    System.out.printf("ID: %d | Tên: %s | Sđt: %s | MSV: %s | Ngành Học: %s \n",getId(),getTen(),getSdt(),getMsv(),getNganhHoc());   
   }
 }

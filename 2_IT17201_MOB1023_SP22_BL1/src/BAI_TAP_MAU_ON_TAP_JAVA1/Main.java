@@ -59,7 +59,15 @@ public class Main {
 
           break;
         case "2":
-
+            System.out.println("Quản lý Giảng Viên");
+            System.out.println("1. Thêm");
+            System.out.println("2. Sửa");
+            System.out.println("3. Xóa");
+            System.out.println("4. Tìm Kiếm");
+            System.out.println("5. Xuất danh sách");
+            System.out.println("6. Tìm kiếm theo tên gần đúng, mã gần đúng đồng thời trên 1 lận nhập");
+            System.out.println("7. Cho người dùng chọn sắp xếp ngược xuôi do bọn em tùy chọn");
+            System.out.println("6. Thoát"); 
           break;
         default:
           System.out.println("Chức năng bạn chọn không tồn tại");
