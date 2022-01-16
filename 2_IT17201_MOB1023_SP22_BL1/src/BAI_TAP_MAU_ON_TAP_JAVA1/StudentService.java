@@ -107,7 +107,9 @@ public class StudentService implements IStudentService {
   //Code các chức năng CRUD của đối tượng 
 
   public int getMaxID(List<Student> lstStd) {
-    if (lstStd.isEmpty()) return 1;
+    if (lstStd.isEmpty()) {
+      return 1;
+    }
     int max = lstStd.get(0).getId();
     for (Student x : lstStd) {
       if (max < x.getId()) {
@@ -129,5 +131,16 @@ public class StudentService implements IStudentService {
   private String getInputValue(String msg) {
     System.out.printf("Mời bạn nhập %s: ", msg);
     return _sc.nextLine();
+  }
+
+  public void timKiemGanDung() {
+    System.out.printf("Mời bạn nhập %s: ");
+    var temp = _sc.nextLine();//dun
+    for (Student x : _lstStudents) {
+      if (x.getTen().startsWith(temp)|| x.getMsv().startsWith(temp)) {
+        x.inRaManHinh();
+        //return;
+      }
+    }
   }
 }
