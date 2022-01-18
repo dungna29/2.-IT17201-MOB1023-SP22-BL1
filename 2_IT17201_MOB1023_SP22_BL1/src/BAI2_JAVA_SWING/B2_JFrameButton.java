@@ -5,6 +5,8 @@
  */
 package BAI2_JAVA_SWING;
 
+import java.awt.Color;
+
 /**
  *
  * @author Dungna89
@@ -26,22 +28,32 @@ public class B2_JFrameButton extends javax.swing.JFrame {
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
-    jButton1 = new javax.swing.JButton();
-    jButton2 = new javax.swing.JButton();
-    jButton3 = new javax.swing.JButton();
+    btn_Red = new javax.swing.JButton();
+    btn_Green = new javax.swing.JButton();
+    btn_Black = new javax.swing.JButton();
     lbl_setTen = new javax.swing.JLabel();
     btn_BamVaoDayNhe = new javax.swing.JButton();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-    jButton1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-    jButton1.setText("RED");
+    btn_Red.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+    btn_Red.setText("RED");
+    btn_Red.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btn_RedActionPerformed(evt);
+      }
+    });
 
-    jButton2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-    jButton2.setText("GREEN");
+    btn_Green.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+    btn_Green.setText("GREEN");
+    btn_Green.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btn_GreenActionPerformed(evt);
+      }
+    });
 
-    jButton3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-    jButton3.setText("BLACK");
+    btn_Black.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+    btn_Black.setText("BLACK");
 
     lbl_setTen.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
     lbl_setTen.setText("jLabel1");
@@ -63,9 +75,9 @@ public class B2_JFrameButton extends javax.swing.JFrame {
         .addComponent(btn_BamVaoDayNhe)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 78, Short.MAX_VALUE)
         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jButton3)
-          .addComponent(jButton2)
-          .addComponent(jButton1))
+          .addComponent(btn_Black)
+          .addComponent(btn_Green)
+          .addComponent(btn_Red))
         .addGap(138, 138, 138))
       .addGroup(layout.createSequentialGroup()
         .addGap(134, 134, 134)
@@ -84,11 +96,11 @@ public class B2_JFrameButton extends javax.swing.JFrame {
             .addGap(73, 73, 73)
             .addComponent(lbl_setTen)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton1)
+            .addComponent(btn_Red)
             .addGap(30, 30, 30)))
-        .addComponent(jButton2)
+        .addComponent(btn_Green)
         .addGap(46, 46, 46)
-        .addComponent(jButton3)
+        .addComponent(btn_Black)
         .addContainerGap(127, Short.MAX_VALUE))
     );
 
@@ -99,6 +111,14 @@ public class B2_JFrameButton extends javax.swing.JFrame {
     System.out.println("Nút đã bấm vào rồi nè");
     lbl_setTen.setText("Chào các bạn nhé!");
   }//GEN-LAST:event_btn_BamVaoDayNheActionPerformed
+
+  private void btn_RedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RedActionPerformed
+   this.getContentPane().setBackground(Color.red);
+  }//GEN-LAST:event_btn_RedActionPerformed
+
+  private void btn_GreenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_GreenActionPerformed
+   this.getContentPane().setBackground(Color.green);
+  }//GEN-LAST:event_btn_GreenActionPerformed
 
   /**
    * @param args the command line arguments
@@ -137,9 +157,9 @@ public class B2_JFrameButton extends javax.swing.JFrame {
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JButton btn_BamVaoDayNhe;
-  private javax.swing.JButton jButton1;
-  private javax.swing.JButton jButton2;
-  private javax.swing.JButton jButton3;
+  private javax.swing.JButton btn_Black;
+  private javax.swing.JButton btn_Green;
+  private javax.swing.JButton btn_Red;
   private javax.swing.JLabel lbl_setTen;
   // End of variables declaration//GEN-END:variables
 }
