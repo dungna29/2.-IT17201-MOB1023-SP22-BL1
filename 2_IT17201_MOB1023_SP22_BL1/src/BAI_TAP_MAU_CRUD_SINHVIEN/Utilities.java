@@ -6,6 +6,7 @@
 package BAI_TAP_MAU_CRUD_SINHVIEN;
 
 import BAI_TAP_MAU_ON_TAP_JAVA1.*;
+import java.text.Normalizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -27,7 +28,7 @@ public class Utilities {
     for (String x : arrName) {
       fullN += vietHoaChuCaiDau(x) + " ";
     }
-    return fullN;
+    return fullN.trim();
   }
 
   String vietHoaChuCaiDau(String text) {//DUNG
@@ -44,7 +45,7 @@ public class Utilities {
     }
     //0 là sinh viên, 1 là GV
     name += ((a == 0) ? "PH" : "") + String.valueOf(maxMSV);//Đoạn cộng PH và số đằng sau 
-    return name;//chuongNVPH001
+    return unAccent(name);//DungnNMPH01
   }
 
   public String[] getAllYears() {
@@ -55,5 +56,10 @@ public class Utilities {
       temp++;
     }
     return arrNamSinh;
+  }
+  public String unAccent(String s) {//Convert từ tiếng việt có dấu về tiếng việt 0 dấu
+    String temp = Normalizer.normalize(s, Normalizer.Form.NFD);
+    Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+    return pattern.matcher(temp).replaceAll("").replaceAll("Đ", "D").replace("đ", "");
   }
 }

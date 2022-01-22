@@ -23,4 +23,7 @@ public interface IStudentService {
   public List<Student> find(String txt);//Tìm Kiếm sv
 //  public void inRaManHinh();//Xuất danh ds sinh viên
   public List<Student> getlstStudents();//Lấy danh sách sinh viên
+  public int getIndexByID(int id);
+  public int getMaxID();
+  public void fake5Data();
 }
