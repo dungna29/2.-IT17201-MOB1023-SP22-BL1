@@ -19,7 +19,7 @@ public interface IStudentService {
   */
   public String add(Student st);//Thêm sv
   public String edit(Student st);//Sửa sv
-  public String delete(String msv);//Xóa sv
+  public String delete(int id);//Xóa sv
   public List<Student> find(String txt);//Tìm Kiếm sv
 //  public void inRaManHinh();//Xuất danh ds sinh viên
   public List<Student> getlstStudents();//Lấy danh sách sinh viên

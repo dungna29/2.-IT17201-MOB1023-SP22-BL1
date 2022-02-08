@@ -64,8 +64,8 @@ public class StudentService implements IStudentService {
   }
 
   @Override
-  public String delete(String msv) {
-    int index = getIndexByID(Integer.parseInt(msv));
+  public String delete(int id) {
+    int index = getIndexByID(id);
     if (index == -1) {
       return "Không tìm thấy";
     }
