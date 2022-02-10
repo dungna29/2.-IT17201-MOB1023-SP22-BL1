@@ -411,6 +411,7 @@ public class S1_Collection {
             Object getKey()                        Được dùng để lấy key.
             Object getValue()                      Được sử dụng để lấy value.
          */
+        
         // Khởi tạo map với key và value
         Map<Integer, String> map = new HashMap<Integer, String>();
         map.put(1, "dungna29");//Đổ giá trị vào MAP
