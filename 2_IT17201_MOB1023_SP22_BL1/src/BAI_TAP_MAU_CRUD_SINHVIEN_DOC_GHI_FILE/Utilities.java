@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package BAI_TAP_MAU_CRUD_SINHVIEN;
+package BAI_TAP_MAU_CRUD_SINHVIEN_DOC_GHI_FILE;
 
 
 import java.text.Normalizer;
